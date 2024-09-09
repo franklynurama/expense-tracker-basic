@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Expenses</title>
+    <link
+      rel="icon"
+      href="https://iconarchive.com/download/i108070/google/noto-emoji-animals-nature/22215-dog.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://iconarchive.com/download/i108070/google/noto-emoji-animals-nature/22215-dog.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://iconarchive.com/download/i108070/google/noto-emoji-animals-nature/22215-dog.ico"
+    />
+    <link rel="stylesheet" href="total-expense.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Total Expenses</h1>
+      <p>Total Expense Amount: $<span id="totalAmount">0.00</span></p>
+      <p>Total Number of Expenses: <span id="totalCount">0</span></p>
+      <div class="charts-container">
+        <div id="pieChartContainer">
+          <canvas id="expensePieChart"></canvas>
+        </div>
+        <div id="barChartContainer">
+          <canvas id="expenseBarChart"></canvas>
+        </div>
+      </div>
+      <!-- Back button to navigate to expenses.html -->
+      <button class="button" id="backButton">Back to Expenses</button>
+    </div>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="total-expense.js"></script>
+  </body>
+</html>

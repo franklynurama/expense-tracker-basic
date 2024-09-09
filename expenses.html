@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link
+      rel="icon"
+      href="https://iconarchive.com/download/i108070/google/noto-emoji-animals-nature/22215-dog.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://iconarchive.com/download/i108070/google/noto-emoji-animals-nature/22215-dog.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://iconarchive.com/download/i108070/google/noto-emoji-animals-nature/22215-dog.ico"
+    />
+    <link rel="stylesheet" href="expenses.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script>
+      // Check if userId is present before the rest of the page loads
+      if (!localStorage.getItem("userId")) {
+        alert("You need to log in to access this page.");
+        // Redirect immediately if userId is not found
+        window.location.href = "index.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <button class="logout-button" onclick="logout()">Logout</button>
+      <h1>Expense Tracker</h1>
+
+      <form id="addExpenseForm">
+        <input
+          type="text"
+          id="expenseCategory"
+          placeholder="Category"
+          required
+        />
+        <input
+          type="text"
+          id="expenseDescription"
+          placeholder="Description"
+          required
+        />
+        <input
+          type="number"
+          id="expenseAmount"
+          placeholder="Amount"
+          min="0.01"
+          step="0.01"
+          required
+        />
+        <input type="date" id="expenseDate" required />
+        <div class="button-div">
+          <button type="submit" class="button">Add Expense</button>
+          <!-- Button for API Actions -->
+          <button type="button" onclick="fetchExpenses()" class="button">
+            Get Expenses
+          </button>
+        </div>
+      </form>
+
+      <ul id="listHeader">
+        <li>
+          <span>Category</span> <span>Description</span> <span>Amount</span>
+          <span>Date</span> <span>Action</span> <span>Action</span>
+        </li>
+      </ul>
+
+      <!-- Expense List -->
+      <ul id="expenseList"></ul>
+
+      <!-- Message Container -->
+      <div id="messageContainer">
+        <p id="getExpensesMessage">
+          Click "GET EXPENSES" to view your expenses
+        </p>
+        <p id="noExpensesMessage" style="display: none">
+          No expenses to view. ADD EXPENSES
+        </p>
+      </div>
+    </div>
+
+    <script src="expenses.js"></script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 0;
+  color: #fff;
+  background-color: #4fbdb2;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 380px;
+}
+
+.button:hover {
+  background-color: #3033a1;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.button-wrapper {
+  text-align: center; /* Center the content inside the wrapper */
+  margin: 20px 0px; /* Space above the wrapper */
+}
+
+.button-wrapper .button {
+  display: inline-block; /* Ensure button is centered */
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.logout-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Oxygen", sans-serif;
+  font-weight: bold;
+  font-size: 2.85em;
+  color: #fff;
+  background-color: #999;
+  border: solid;
+  padding: 8.5px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px -4px rgba(0, 0, 0, 0.8);
+}
+
+#expenseList {
+  list-style: none;
+  padding: 0;
+}
+
+#expenseList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#expenseList li:last-child {
+  border-bottom: none;
+}
+
+#addExpenseForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+#addExpenseForm input,
+#addExpenseForm button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#addExpenseForm button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px;
+  color: #fff;
+  background-color: #4fbdb2;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#addExpenseForm button:hover {
+  background-color: #3033a1;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+#listHeader {
+  list-style: none;
+  padding: 0;
+}
+
+#listHeader li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 8px;
+  color: #fff;
+  background-color: #999;
+  border: 1.5px solid #000;
+  box-shadow: 0 5px 15px -4px rgba(0, 0, 0, 0.2);
+}
+
+#messageContainer {
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+#messageContainer p {
+  margin: 10px 0;
+}
